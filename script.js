@@ -24,5 +24,26 @@ function changeBGcolor(event){
     }
 }
 
+function redirectToGoogle(event){
+    window,location.assign("https://www.google.com");
+}
 
-/* Task 4 using jQuery */
+/* Task 4a using jQuery */
+$('#addText4').click(function(event){
+    var paragraph = $('<p>').text('Hello world');
+    $('#task4a').append(paragraph);
+    
+});
+
+/* Task 4b using jQuery */
+function changeBG(event){
+    var color=event.target.innerText.toLocaleLowerCase();
+    $('body').css('background-color',color);
+}
+
+/* Task 4c using jQuery */
+
+$("#sum").click(function(event){
+    var sum=Number($("#num1").val())+Number($("#num2").val());
+    $('#result').text(sum);
+});
